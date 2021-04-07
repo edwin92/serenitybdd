@@ -16,6 +16,7 @@
         <serenity.maven.version>2.4.1</serenity.maven.version>
         <serenity.cucumber.version>2.3.33</serenity.cucumber.version>
         <encoding>UTF-8</encoding>
+        <parallel.tests>4</parallel.tests>
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
     </properties>
@@ -105,6 +106,8 @@
                     </systemPropertyVariables>
                     <parallel>classes</parallel>
                     <parallel>methods</parallel>
+                    <threadCount>${parallel.tests}</threadCount>
+                    <forkCount>${parallel.tests}</forkCount>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                 </configuration>
                 <executions>

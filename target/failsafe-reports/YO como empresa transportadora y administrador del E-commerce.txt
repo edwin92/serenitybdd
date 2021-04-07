@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: YO como empresa transportadora y administrador del E-commerce
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 70.419 s - in YO como empresa transportadora y administrador del E-commerce

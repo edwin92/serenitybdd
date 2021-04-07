@@ -1,5 +1,8 @@
+transportation\pages\DemandPage.class
+transportation\stepsdefinitions\DemandDefinition.class
 transportation\pages\TransportationPointPage.class
 transportation\pages\LoginPage.class
 transportation\steps\LoginStep.class
 transportation\stepsdefinitions\LoginDefinition.class
 Runner.class
+transportation\steps\DemandStep.class

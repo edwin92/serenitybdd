@@ -176,7 +176,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 06-04-2021 20:44</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-04-2021 17:15</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -192,8 +192,8 @@
                             <div class="test-count-summary">
                                 <div>
 
-                                0 tests
-                                    across 0 scenarios
+                                9 tests
+                                    across 4 scenarios
 
                                      |
                                         <a href="daddd2efb578e5de612cb8554a208cd170f56dca27865fb6a674ea6efdecdfb1.csv" title="Download CSV"> <i class="fa fa-download"
@@ -226,6 +226,54 @@
                                             <div class="container-fluid">
                                                 <div class="row">
                                                     <div class="col-sm-4">
+                                                            <div style="width:300px;"
+                                                                 class="chart-container automated-and-manual-results">
+                                                                <div class="ct-chart ct-square"></div>
+                                                            </div>
+                                                            <script>
+
+                                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                                var series = [{meta: 'Passing tests (automated)', value: 9}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                                // as you saw in the previous example
+                                                                var options = {
+                                                                    width: 350,
+                                                                    height: 300
+                                                                };
+
+
+                                                                new Chartist.Pie('.ct-chart', {
+                                                                    series: series,
+                                                                    labels: labels
+                                                                }, {
+                                                                    plugins: [Chartist.plugins.tooltip()],
+                                                                    donut: true,
+                                                                    donutWidth: 60,
+                                                                    donutSolid: true,
+                                                                    startAngle: 270,
+                                                                    showLabel: true
+                                                                }, options);
+
+
+                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                                    new Chartist.Pie('.ct-chart', {
+                                                                        series: series,
+                                                                        labels: labels
+                                                                    }, {
+                                                                        plugins: [Chartist.plugins.tooltip()],
+                                                                        donut: true,
+                                                                        donutWidth: 60,
+                                                                        donutSolid: true,
+                                                                        startAngle: 270,
+                                                                        showLabel: true
+                                                                    }, options);
+                                                                });
+
+
+                                                            </script>
                                                     </div>
                                                     <div class="col-sm-8">
 
@@ -240,11 +288,12 @@
                                                             </thead>
                                                             <tbody>
                                                             <tr>
-                                                                    <td class="aggregate-result-count"><i
-                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="60300efbdce235e2dc5539d4975d86f1d44092323718bf524832f2807bee0652.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                                <td class="automated-stats">0</td>
-                                                                <td class="automated-stats"> </td>
+                                                                <td class="automated-stats">9</td>
+                                                                <td class="automated-stats">100%</td>
                                                             </tr>
                                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -296,7 +345,7 @@
                                                             </tr>
                                                             <tr class="summary-stats">
                                                                 <td class="aggregate-result-count">Total</td>
-                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats">9</td>
                                                                 <td class="automated-stats"></td>
                                                             </tr>
                                                             </tbody>
@@ -305,6 +354,23 @@
                                                 </div>
 
 
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3>Tags</h3>
+
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div>
+                                                                    <a href="980553ab65ac3a80cb226527d564bcf09dfb50e9d5c6245f24578a314fb4b271.html">
+                                                                        <span class="badge"
+                                                                              style="background-color:#1D9918; margin:1em;padding:4px;"><i
+                                                                                class="fa fa-tag"></i> Cucumber&nbsp;&nbsp;&nbsp;9</span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div id="tests" class="tab-pane fade">
@@ -313,7 +379,74 @@
                                                     <div class="col-sm-12">
                                                         <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            No automated tests were executed
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th>feature</th>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="26a7c3e34ed62516c456c404bb0bb7f2db9265dd99e90e125b9ee6708b05d741.html">YO como empresa transportadora y administrador del E-commerce</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="ee4e0db607d3380ff0adfed1fdcbbf294acaff5937eab7e6855c494f44511270.html">En el módulo administrativo debe contar una sección para conocer la demanda que se ha tenido en términos de servicio de transporte.</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>17:14:36</td>
+                                                    <td>12s 853ms</td>
+                                                    <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="26a7c3e34ed62516c456c404bb0bb7f2db9265dd99e90e125b9ee6708b05d741.html">YO como empresa transportadora y administrador del E-commerce</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="419f41f512110d6420da61f32ba929f46c66ac0783f9e6477a8e4200239987e8.html">Esta sección para el informe de la demanda de transporte debe contener lo siguiente</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>17:14:52</td>
+                                                    <td>8s 179ms</td>
+                                                    <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="26a7c3e34ed62516c456c404bb0bb7f2db9265dd99e90e125b9ee6708b05d741.html">YO como empresa transportadora y administrador del E-commerce</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="ed8a958282ed3d6158bdd8a339be31bafb38256f007467f1558885e2e8f6cc30.html">Esta sección del informe de la demanda del transporte debe contener los siguiente a nivel de experiencia, para una mejor y fácil consulta.</a>
+                                                                   (4 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>17:15:02</td>
+                                                    <td>43s 673ms</td>
+                                                    <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="345453650b3259a2ff7428fd9f86846799fa4b0d114b4879ea797b895f3552f5.html">Iniciar sesion en portal transporte</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="9264d70f00a7cfcb8cb1b447c57e11d2e23c4ef22dcd11a8101a64de2e2fb019.html">Iniciar sesion con diferentes roles</a>
+                                                                   (3 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>17:14:36</td>
+                                                    <td>36s 426ms</td>
+                                                    <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
 
                                                     </div>
                                                 </div>

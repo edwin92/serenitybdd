@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Iniciar sesion en portal transporte" skipped="0" tests="3" time="19.98" timestamp="2021-04-06 08:43:54"><testcase name="Iniciar sesion con diferentes roles"><failure type="java.lang.AssertionError"/><system-err>null&#13;
-TestTransportation@1.0-SNAPSHOT/transportation.steps.LoginStep.viewHomePage(LoginStep.java:37)&#13;
-TestTransportation@1.0-SNAPSHOT/transportation.stepsdefinitions.LoginDefinition.viewHomePage(LoginDefinition.java:29)&#13;
-✽.Transportista deberia poder ver la pantalla principal de: Hola Prueba Ajustes(file:///C:/Users/EdwinFerreira/Documents/bitsamericas/TestTransportation/src/test/resources/features/login.feature:12)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Iniciar sesion en portal transporte" skipped="0" tests="3" time="36.43" timestamp="2021-04-07 05:14:36"><testcase name="Iniciar sesion con diferentes roles"/></testsuite>
